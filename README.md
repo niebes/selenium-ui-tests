@@ -1,1 +1,1 @@
-# idealo-ui-tests
+# selenium-ui-tests
