@@ -14,7 +14,7 @@ interface HeadlessDriverProvider : DriverProvider {
     fun getHeadlessDriver(): WebDriver {
         val os = getOs()
         val phantomJsBinPath = when {
-            os.contains("Linux") -> "./src/test/resources/phantomjs-64"
+            os.contains("Linux") -> "./src/test/resources/phantomjs-linux64"
             os.contains("Mac") -> "./src/test/resources/phantomjs-mac"
             else -> throw IllegalStateException("no driver found")
         }.let(::File)
