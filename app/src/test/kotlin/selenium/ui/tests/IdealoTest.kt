@@ -17,7 +17,6 @@ class IdealoTest : HeadlessDriverProvider {
 
     @Test
     internal fun open_page() {
-
         val baseUrl = "http://www.google.de/";
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         driver.get(baseUrl);
