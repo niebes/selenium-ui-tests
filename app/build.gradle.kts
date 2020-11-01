@@ -16,7 +16,10 @@ plugins {
 
 repositories {
     // Use JCenter for resolving dependencies.
+    mavenLocal()
+    mavenCentral()
     jcenter()
+    maven("https://jitpack.io" )
 }
 
 dependencies {
@@ -34,9 +37,17 @@ dependencies {
 
     // Use the Kotlin JUnit integration.
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit")
+    testImplementation(group = "org.seleniumhq.selenium", name = "selenium-java", version = "3.141.59")
+    testImplementation(group = "com.github.detro", name = "ghostdriver", version = "2.1.0")
+    testImplementation(group = "org.junit.jupiter", name = "junit-jupiter-api", version = "5.2.0")
+    testImplementation(group = "org.junit.jupiter", name = "junit-jupiter-engine", version = "5.2.0")
 }
 
 application {
     // Define the main class for the application.
     mainClass.set("selenium.ui.tests.AppKt")
+}
+
+tasks.withType<Test> {
+    useJUnitPlatform()
 }
