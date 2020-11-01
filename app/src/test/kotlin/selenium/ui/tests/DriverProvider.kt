@@ -26,5 +26,5 @@ interface HeadlessDriverProvider : DriverProvider {
         return PhantomJSDriver(caps)
     }
 
-    fun getOs() = System.getProperty("os.name")
+    fun getOs(): String = System.getProperty("os.name")
 }

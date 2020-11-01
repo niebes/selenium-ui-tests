@@ -41,6 +41,7 @@ dependencies {
     testImplementation(group = "com.github.detro", name = "ghostdriver", version = "2.1.0")
     testImplementation(group = "org.junit.jupiter", name = "junit-jupiter-api", version = "5.2.0")
     testImplementation(group = "org.junit.jupiter", name = "junit-jupiter-engine", version = "5.2.0")
+    testImplementation(group = "org.assertj", name = "assertj-core", version = "3.11.1")
 }
 
 application {
