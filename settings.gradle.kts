@@ -8,4 +8,4 @@
  */
 
 rootProject.name = "selenium-ui-tests"
-include("app")
+include("ui-tests")

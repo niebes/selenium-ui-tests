@@ -22,8 +22,8 @@ class GoogleTest : HeadlessDriverProvider {
         google.open()
         google.`fill and submit search`("selenium how to")
         `take screenshot`("google-search.png")
-        assertThat(driver.title).contains("selenium how to")
         println(driver.title)
+        assertThat(driver.title).contains("selenium how to")
     }
 
     private fun `take screenshot`(filename: String) {

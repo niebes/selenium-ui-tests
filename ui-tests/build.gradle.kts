@@ -8,10 +8,7 @@
 
 plugins {
     // Apply the org.jetbrains.kotlin.jvm Plugin to add support for Kotlin.
-    id("org.jetbrains.kotlin.jvm") version "1.3.72"
-
-    // Apply the application plugin to add support for building a CLI application in Java.
-    application
+    id("org.jetbrains.kotlin.jvm") version "1.4.10"
 }
 
 repositories {
@@ -19,34 +16,17 @@ repositories {
     mavenLocal()
     mavenCentral()
     jcenter()
-    maven("https://jitpack.io" )
+    maven("https://jitpack.io")
 }
 
 dependencies {
-    // Align versions of all Kotlin components
     implementation(platform("org.jetbrains.kotlin:kotlin-bom"))
-
-    // Use the Kotlin JDK 8 standard library.
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-
-    // This dependency is used by the application.
-    implementation("com.google.guava:guava:29.0-jre")
-
-    // Use the Kotlin test library.
-    testImplementation("org.jetbrains.kotlin:kotlin-test")
-
-    // Use the Kotlin JUnit integration.
-    testImplementation("org.jetbrains.kotlin:kotlin-test-junit")
     testImplementation(group = "org.seleniumhq.selenium", name = "selenium-java", version = "3.141.59")
     testImplementation(group = "com.github.detro", name = "ghostdriver", version = "2.1.0")
     testImplementation(group = "org.junit.jupiter", name = "junit-jupiter-api", version = "5.2.0")
     testImplementation(group = "org.junit.jupiter", name = "junit-jupiter-engine", version = "5.2.0")
     testImplementation(group = "org.assertj", name = "assertj-core", version = "3.11.1")
-}
-
-application {
-    // Define the main class for the application.
-    mainClass.set("selenium.ui.tests.AppKt")
 }
 
 tasks.withType<Test> {
