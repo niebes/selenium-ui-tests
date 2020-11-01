@@ -8,31 +8,22 @@ import selenium.ui.tests.SeleniumUtils.Companion.takeScreenshot
 
 class GoogleTest : HeadlessDriverProvider {
 
-    lateinit var driver: WebDriver
+    private lateinit var driver: WebDriver
+    private lateinit var google: GooglePage
 
     @BeforeEach
     internal fun setUp() {
         driver = getWebDriver()
+        google = GooglePage(driver)
     }
 
     @Test
     internal fun open_page() {
-        `open google`()
-        `fill and submit search`("selenium how to")
+        google.open()
+        google.`fill and submit search`("selenium how to")
         `take screenshot`("google-search.png")
         assertThat(driver.title).contains("selenium how to")
         println(driver.title)
-    }
-
-    private fun `open google`() {
-        driver.get("http://www.google.de/");
-    }
-
-    private fun `fill and submit search`(searchTerm: String) {
-        with(driver.findElements(By.name("q")).single()) {
-            sendKeys(searchTerm)
-            submit()
-        }
     }
 
     private fun `take screenshot`(filename: String) {
