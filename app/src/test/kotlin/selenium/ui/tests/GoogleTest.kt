@@ -18,7 +18,7 @@ class GoogleTest : HeadlessDriverProvider {
     }
 
     @Test
-    internal fun open_page() {
+    internal fun `google search result title should contain search term`() {
         google.open()
         google.`fill and submit search`("selenium how to")
         `take screenshot`("google-search.png")
