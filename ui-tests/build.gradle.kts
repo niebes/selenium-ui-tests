@@ -8,7 +8,7 @@
 
 plugins {
     // Apply the org.jetbrains.kotlin.jvm Plugin to add support for Kotlin.
-    id("org.jetbrains.kotlin.jvm") version "1.8.0"
+    id("org.jetbrains.kotlin.jvm") version "1.9.23"
 }
 
 repositories {
@@ -24,7 +24,7 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     testImplementation(group = "org.seleniumhq.selenium", name = "selenium-java", version = "3.141.59")
     testImplementation(group = "com.github.detro", name = "ghostdriver", version = "2.1.0")
-    testImplementation(group = "org.junit.jupiter", name = "junit-jupiter-api", version = "5.9.1")
+    testImplementation(group = "org.junit.jupiter", name = "junit-jupiter-api", version = "5.10.2")
     testImplementation(group = "org.junit.jupiter", name = "junit-jupiter-engine", version = "5.10.2")
     testImplementation(group = "org.assertj", name = "assertj-core", version = "3.25.3")
 }
