@@ -22,7 +22,7 @@ repositories {
 dependencies {
     implementation(platform("org.jetbrains.kotlin:kotlin-bom"))
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-    testImplementation(group = "org.seleniumhq.selenium", name = "selenium-java", version = "3.141.59")
+    testImplementation(group = "org.seleniumhq.selenium", name = "selenium-java", version = "4.18.1 ")
     testImplementation(group = "com.github.detro", name = "ghostdriver", version = "2.1.0")
     testImplementation(group = "org.junit.jupiter", name = "junit-jupiter-api", version = "5.9.1")
     testImplementation(group = "org.junit.jupiter", name = "junit-jupiter-engine", version = "5.10.2")
